@@ -50,5 +50,6 @@ return {
         vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
         vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
         vim.keymap.set('n', '<leader>ls', require('telescope.builtin').resume, { desc = '[L]ast [S]earch' })
+        vim.keymap.set('n', '<leader>sk', require('telescope.builtin').keymaps, { desc = '[S]earch [K]yemaps' })
     end
 }
