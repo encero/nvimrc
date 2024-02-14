@@ -9,7 +9,20 @@ return {
     },
 
     config = function()
-        require('telescope').setup({})
+        require('telescope').setup({
+            pickers = {
+                buffers = {
+                    mappings = {
+                        n = {
+                            ["x"] = "delete_buffer",
+                        },
+                        i = {
+                            ["<M-x>"] = "delete_buffer",
+                        }
+                    }
+                }
+            }
+        })
 
         vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles,
             { desc = '[?] Find recently opened files' })
