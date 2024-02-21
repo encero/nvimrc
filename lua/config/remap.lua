@@ -46,7 +46,8 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {desc="Diagnostic next"})
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {desc="Diagnostic in window"})
 vim.keymap.set('n', '<leader>E', vim.diagnostic.setloclist, {desc="diagnostic loc list"} )
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Primogen uses this, start replacing curent word
+-- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set(
     "n",
