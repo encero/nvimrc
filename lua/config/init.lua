@@ -20,6 +20,7 @@ vim.filetype.add({
     }
 })
 
+-- Highlight yanked block
 autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',
@@ -31,6 +32,8 @@ autocmd('TextYankPost', {
     end,
 })
 
+
+-- Delete trailing whitespaces on save
 autocmd({ "BufWritePre" }, {
     group = TheConfigGroup,
     pattern = "*",
