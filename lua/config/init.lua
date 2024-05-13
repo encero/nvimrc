@@ -32,9 +32,10 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({'BufRead',"BufNewFile"}, {
+-- enable spelling checks on specific file types
+autocmd({'FileType'}, {
     group = TheConfigGroup,
-    pattern = "*.md",
+    pattern = {"markdown", "gitcommit"},
     command = "set spell",
 })
 
