@@ -32,6 +32,12 @@ autocmd('TextYankPost', {
     end,
 })
 
+autocmd({'BufRead',"BufNewFile"}, {
+    group = TheConfigGroup,
+    pattern = "*.md",
+    command = "set spell",
+})
+
 
 -- Delete trailing whitespaces on save
 autocmd({ "BufWritePre" }, {
