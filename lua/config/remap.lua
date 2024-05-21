@@ -3,6 +3,14 @@ vim.keymap.set('i', 'jk', '<esc>', { silent = true })
 vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+vim.keymap.set("n", "<M-j>", "<C-w>j")
+vim.keymap.set("n", "<M-k>", "<C-w>k")
+vim.keymap.set("n", "<M-h>", "<C-w>h")
+vim.keymap.set("n", "<M-l>", "<C-w>l")
+
+vim.keymap.set("n", "<M-<>", "5<C-w><")
+vim.keymap.set("n", "<M->>", "5<C-w>>")
+
 
 -- move lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -37,8 +45,8 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 -- fix list next back
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz")
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {desc="Diagnostic prev"})
