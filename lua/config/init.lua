@@ -33,9 +33,9 @@ autocmd('TextYankPost', {
 })
 
 -- enable spelling checks on specific file types
-autocmd({'FileType'}, {
+autocmd({ 'FileType' }, {
     group = TheConfigGroup,
-    pattern = {"markdown", "gitcommit"},
+    pattern = { "markdown", "gitcommit" },
     command = "set spell",
 })
 
@@ -45,6 +45,13 @@ autocmd({ "BufWritePre" }, {
     group = TheConfigGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
+})
+
+
+autocmd({ "BufWritePre" }, {
+    group = TheConfigGroup,
+    pattern = "*.go",
+    command = ":lua vim.lsp.buf.format()",
 })
 
 autocmd('LspAttach', {
