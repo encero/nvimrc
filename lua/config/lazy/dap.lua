@@ -46,6 +46,7 @@ return {
     vim.keymap.set('n', '<leader>dB', function()
       dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')
     end, { desc = 'Debug: Set Breakpoint' })
+    vim.keymap.set('n', '<leader>dt', require('dap-go').debug_test, { desc = 'Debug: Test' })
 
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
