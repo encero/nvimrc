@@ -35,7 +35,7 @@ autocmd('TextYankPost', {
 -- enable spelling checks on specific file types
 autocmd({ 'FileType' }, {
     group = TheConfigGroup,
-    pattern = { "markdown", "gitcommit" },
+    pattern = { "markdown", "gitcommit", "proto", "go"},
     command = "set spell",
 })
 

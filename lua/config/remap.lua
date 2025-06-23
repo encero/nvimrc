@@ -55,7 +55,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {desc="Diagnostic in
 vim.keymap.set('n', '<leader>E', vim.diagnostic.setloclist, {desc="diagnostic loc list"} )
 
 -- Primogen uses this, start replacing curent word
--- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set(
     "n",
