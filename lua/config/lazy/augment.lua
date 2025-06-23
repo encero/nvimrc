@@ -1,4 +1,4 @@
-return {
+local augment = {
     {
         'augmentcode/augment.vim',
         init = function()
@@ -14,3 +14,5 @@ return {
         end,
     },
 }
+
+return {}
