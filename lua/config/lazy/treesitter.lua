@@ -1,4 +1,3 @@
-
 local function text_objects()
     return {
         select = {
@@ -49,6 +48,7 @@ end
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
     config = function()
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all"
@@ -56,6 +56,7 @@ return {
                 "vimdoc", "javascript", "typescript", "c", "lua", "rust",
                 "jsdoc", "bash",
             },
+            textobjects = text_objects(),
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,
@@ -81,4 +82,3 @@ return {
         })
     end
 }
-
