@@ -7,7 +7,7 @@ return {
             })
 
             vim.keymap.set("n", "<leader>tt", function()
-                require("trouble").toggle("documment_diagnostics")
+                require("trouble").toggle("document_diagnostics")
             end)
 
             vim.keymap.set("n", "<leader>tw", function()
